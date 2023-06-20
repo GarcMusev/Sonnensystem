@@ -1,0 +1,12 @@
+@mixin basic-responsive-grid($display, $grid-template-columns, $grid-template-rows, $gap){
+  display: $display;
+  grid-template-columns: $grid-template-columns;
+  grid-template-rows: $grid-template-rows;
+  gap: $gap
+}
+
+@mixin basic-responsive-flex($display){
+  display: $display;
+  justify-content: center;
+  list-style: none;
+}

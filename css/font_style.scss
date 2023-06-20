@@ -1,0 +1,26 @@
+//Map
+$font-sizes: (
+    h1: 5.0rem,
+    h2: 2.5rem,
+    li: 1.0rem,
+    span: 1.0rem,
+);
+
+span{
+    font-weight: bold;
+    font-style: italic;
+}
+
+@each $tag, $sizes in $font-sizes {
+    #{$tag} {
+        font-size: $sizes;
+        font-family: "LEMON MILK";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 3.0rem;
+        margin-top: 20%;
+    }
+}

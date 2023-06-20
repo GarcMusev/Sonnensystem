@@ -1,0 +1,184 @@
+@use "sass:math";
+@use "mixins";
+
+//Blueprint für die Buttons
+%button-base {
+    border-radius: 20px;
+    display: block;
+    margin: 5% auto;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 15%;
+}
+
+//Grid für alle Article Boxen
+main{
+  @include mixins.basic-responsive-grid(grid, 1fr 1fr, none, 500px 100px);
+}
+
+//Grid innerhalb jedes articles
+article{
+  @include mixins.basic-responsive-grid(grid, none, 50px 1fr 300px,10px);
+  justify-items: center;
+  align-items: center;
+}
+
+//Layout speziell für die <ul> in jedem Article + img
+article{
+  ul{
+    border: 1px solid #fdfd82;
+    border-radius: 20px;
+    padding: 2%;
+    list-style: none;
+  }
+  img{
+    margin-bottom: 5%;
+    width: 20em;
+    height: auto;
+  }
+  #img_uranus{
+    height: 12em;
+  }
+}
+
+// Default Layout Einstellungen für die Planeten Nav Bar
+nav ul {
+  @include mixins.basic-responsive-flex(flex);
+  flex-wrap: wrap;
+  padding: 5%;
+    li {
+      margin: 1%;
+      img {
+        width: 2em;
+        height: auto;
+      }
+    }
+}
+
+//Setze die individuellen Größen der Planeten
+nav ul{
+  li:nth-child(1){  //Merkur
+    img{
+      width: 1.5em;
+      height: auto;
+    }
+  }
+  li:nth-child(3),    //Erde
+  li:nth-child(7),    //Uranus
+  li:nth-child(8),{   //Neptun
+    img{
+      width: 4.5em;
+      height: auto;
+    }
+  }
+   li:nth-child(5),   //Jupiter
+   li:nth-child(6),{    //Saturn
+     img{
+       width: 12.5em;
+       height: auto;
+     }
+   }
+}
+
+//Default-Layout für das Formular
+article:nth-child(9){
+  img{
+    margin-top: 2%;
+    width: 15em;
+    height: auto;
+  }
+  form{
+    align-self: start;
+    border: 1px solid #fdfd82;
+    border-radius: 20px;
+    padding: 3%;
+    input{
+      width: 100%;
+    }
+    #submit{
+      @extend %button-base;
+    }
+    #reset{
+      @extend %button-base;
+    }
+  }
+}
+
+//Spezielle Einstellungen fürs Quiz
+article:nth-child(10){
+  h2{
+    text-align: center;
+  }
+  img{
+    width: 25em;
+    height: auto;
+  }
+  ol{
+    align-self: start;
+     span {
+       opacity: 0;
+     }
+    :hover{
+      transition: opacity 2s ease-in-out;
+      opacity: 1;
+    }
+  }
+}
+
+//Iteriere durch die 50 generierten Sterne, Und erstelle ein Layout
+@for $i from 1 through 50{
+  #star-#{$i} {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    left: math.random()*6em*$i;    //Math import für random generierte Positionen
+    bottom: math.random()*6em*$i;
+    right: math.random()*6em*$i;
+    top: math.random()*6em*$i;
+  }
+}
+
+#img_sun{
+  position: absolute;
+  top: -250px;
+  left: -480px;
+}
+
+
+@media screen and (max-width: 800px){
+  main{   //Alle article werden vertikal angeordnet
+    display: inline-block;
+    article{
+      margin-top: 15%;
+      &:nth-child(10) {
+        margin-top: 100%;
+      }
+    }
+  }
+
+  nav{
+    ul{   //Alle Planeten werden vertikal angeordnet
+      flex-direction: column;
+      li{
+        align-self: center;
+      }
+   }
+  }
+   #img_sun{
+     position: absolute;
+     top: -500px;
+     left: 0px;
+  }
+}
+
+
+
+
+

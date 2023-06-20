@@ -1,0 +1,244 @@
+body {
+  background-color: #000000;
+}
+
+button {
+  transition: color 1s;
+}
+button:hover {
+  background-color: #fdfd82;
+}
+
+h2 {
+  text-decoration: underline #8282fd;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+h2 {
+  color: #fdfd82;
+}
+
+li {
+  color: #c1c1fe;
+}
+
+span {
+  color: #fdfd82;
+}
+
+#star-1 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-2 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-3 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-4 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-5 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-6 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-7 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-8 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-9 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-10 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-11 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-12 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-13 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-14 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-15 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-16 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-17 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-18 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-19 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-20 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-21 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-22 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-23 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-24 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-25 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-26 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-27 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-28 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-29 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-30 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-31 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-32 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-33 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-34 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-35 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-36 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-37 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-38 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-39 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-40 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-41 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-42 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-43 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-44 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-45 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-46 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-47 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-48 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-49 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+#star-50 {
+  animation: star_color_change 5s infinite ease-in-out;
+}
+
+@keyframes star_color_change {
+  0% {
+    background-color: #ffffff;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: #ffffff;
+  }
+}
+
+/*# sourceMappingURL=color_style.css.map */

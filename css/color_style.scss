@@ -1,0 +1,62 @@
+@use "sass:color";
+
+$black: #000000;
+$yellow: #FFFF00FF;
+$white: #ffffff;
+$light-yellow: #fdfd82;
+$light-yellow-complement : color.complement($light-yellow);
+
+body{
+  background-color: $black;
+}
+
+button{
+  transition: color 1s;
+  &:hover{
+    background-color: $light-yellow;
+  }
+}
+
+h2{
+  text-decoration: underline $light-yellow-complement;
+}
+
+//Map
+$font-colors: (
+    h1: $white,
+    h2: $light-yellow,
+    li: color.mix($white, $light-yellow-complement),
+    span: $light-yellow,
+);
+
+//Iteriere durch jedes Element in der Map und setze die farbe
+@each $tag, $color in $font-colors{
+    #{$tag} {
+        color: $color;
+    }
+}
+
+//Iteriere durch die 50 Stern Elemente, und weise jedem eine Farbe hinzu mit Animation
+@for $i from 1 through 50{
+   #star-#{$i} {
+     animation: star_color_change 5s infinite ease-in-out;
+   }
+}
+
+//Farb-Effekt für jeden Stern
+@keyframes star_color_change{
+  0%{
+    background-color: $white;
+  }
+  50%{
+    background-color: $yellow;
+  }
+  100%{
+    background-color: $white;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,133 @@
+article {
+  opacity: 0;
+}
+
+article.show {
+  transition: opacity 2s ease-in-out;
+  opacity: 1;
+}
+
+h1 {
+  transition: transform 1s;
+}
+h1:hover {
+  transform: scale(1.1);
+}
+
+li:nth-child(1) img {
+  animation: nav_planets_hover_space 11s infinite alternate ease-in-out;
+}
+li:nth-child(1) img:hover {
+  animation-play-state: paused;
+}
+
+li:nth-child(2) img {
+  animation: nav_planets_hover_space 12s infinite alternate ease-in-out;
+}
+li:nth-child(2) img:hover {
+  animation-play-state: paused;
+}
+
+li:nth-child(3) img {
+  animation: nav_planets_hover_space 13s infinite alternate ease-in-out;
+}
+li:nth-child(3) img:hover {
+  animation-play-state: paused;
+}
+
+li:nth-child(4) img {
+  animation: nav_planets_hover_space 14s infinite alternate ease-in-out;
+}
+li:nth-child(4) img:hover {
+  animation-play-state: paused;
+}
+
+li:nth-child(5) img {
+  animation: nav_planets_hover_space 15s infinite alternate ease-in-out;
+}
+li:nth-child(5) img:hover {
+  animation-play-state: paused;
+}
+
+li:nth-child(6) img {
+  animation: nav_planets_hover_space 16s infinite alternate ease-in-out;
+}
+li:nth-child(6) img:hover {
+  animation-play-state: paused;
+}
+
+li:nth-child(7) img {
+  animation: nav_planets_hover_space 17s infinite alternate ease-in-out;
+}
+li:nth-child(7) img:hover {
+  animation-play-state: paused;
+}
+
+li:nth-child(8) img {
+  animation: nav_planets_hover_space 18s infinite alternate ease-in-out;
+}
+li:nth-child(8) img:hover {
+  animation-play-state: paused;
+}
+
+#img_sun {
+  animation: nav_planets_hover_space 40s infinite ease-in-out;
+}
+
+article img:not(#img_blueprint, #img_sunsystem) {
+  animation: article_planets_hover_space 10s infinite ease-in-out;
+}
+
+button {
+  transition: transform 1s;
+}
+button:hover {
+  transform: scale(1.2);
+}
+
+@keyframes nav_planets_hover_space {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-100px) translateX(-10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes article_planets_hover_space {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(20px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+@media screen and (max-width: 800px) {
+  li img {
+    animation: nav_planets_hover_space 9s infinite alternate ease-in-out;
+  }
+  li img:hover {
+    animation-play-state: paused;
+  }
+  @keyframes nav_planets_hover_space {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    30% {
+      transform: translateX(-50px) translateY(-10px);
+    }
+    60% {
+      transform: translateX(50px) translateY(-10px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+}
+
+/*# sourceMappingURL=animation_style.css.map */

@@ -1,0 +1,107 @@
+//Default Opacity für Articles ist immer auf Null
+article{
+  opacity: 0;
+}
+
+//Sobald Observer drauf ist, erscheinen die Artikel
+article.show{
+  transition: opacity 2s ease-in-out;
+  opacity: 1;
+}
+
+
+//Scaling der h1 Überschrift, beim hovern
+h1{
+  transition: transform 1s;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+//Planeten Nav Bar schweben an X und Y Achse
+@for $i from 1 through 8  {
+  li:nth-child(#{$i}) {
+    img {
+      animation: nav_planets_hover_space ($i+10s) infinite alternate ease-in-out;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+//Sonne bekommt eigene Geschwindigkeit
+#img_sun{
+  animation: nav_planets_hover_space 40s infinite  ease-in-out;
+}
+
+//Planeten in den Article schweben an Y-Achse
+article{
+  img:not(#img_blueprint, #img_sunsystem){
+    animation: article_planets_hover_space 10s infinite ease-in-out;
+  }
+}
+
+//Button werden beim hovern größer
+button{
+  transition: transform 1s;
+  &:hover{
+    transform: scale(1.2);
+  }
+}
+
+@keyframes nav_planets_hover_space{
+  0% {
+    transform: translateY(0) translateX(0);
+
+  }
+  50% {
+    transform: translateY(-100px) translateX(-10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes article_planets_hover_space{
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(20px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  li {
+    img {
+      animation: nav_planets_hover_space 9s infinite alternate ease-in-out;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  @keyframes nav_planets_hover_space{
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    30% {
+      transform: translateX(-50px) translateY(-10px);
+    }
+    60%{
+      transform: translateX(50px) translateY(-10px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+}
+
+
+
+
